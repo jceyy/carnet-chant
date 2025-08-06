@@ -1,0 +1,142 @@
+\documentclass[9pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+% \usepackage[a5paper, landscape]{geometry}
+\usepackage[chorded]{songs}
+% \usepackage[lyric]{songs}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[hidelinks]{hyperref}
+\usepackage{geometry}
+ \geometry{
+ a5paper,
+ landscape,
+ right=10mm,
+ left=10mm,
+ top=8mm,
+ bottom=8mm
+}
+
+
+
+\renewcommand{\lyricfont}{\sffamily\small}
+\renewcommand{\printchord}[1]{\sffamily\slshape\normalsize#1}
+
+\newcommand{\mysongsection}[1]{\begin{intersong*}\begin{center}{\sffamily\Huge #1}\end{center}\end{intersong*}}
+
+% Indexes
+\newindex{titleidx}{idx_files/idxfile}
+\newauthorindex{authidx}{idx_files/idxfile2}
+
+\begin{document}
+\MultiwordChords
+
+\pagenumbering{gobble}
+
+\begin{figure}[ht!]
+     \centering
+     \begin{subfigure}[b]{0.3\textwidth}
+         \includegraphics[width=\textwidth]{images/SGDF_logo.png}%
+         \hfill
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.3\textwidth}
+     \centering
+         \includegraphics[width=.7\textwidth]{images/logo-clameur.png}%
+         \hfill
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.3\textwidth}
+         \hfill%
+         \includegraphics[width=.4\textwidth]{images/Scout_Logo.png}
+     \end{subfigure}
+\end{figure}
+
+\vspace{.2cm}
+\begin{center}
+    {\Large{Groupes de Rouffach, Turckheim et de la 5e Mulhouse}}\\ \vspace{.5cm}
+    {\Huge{\textbf{Camp Pionniers Caravelles 2025}}}\\ \vspace{.5cm}
+    {\Large{Carnet de chants}}
+\end{center}
+%
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=0.25\linewidth]{images/logo-clameur.png}
+%     % \caption{Caption}
+%     % \label{fig:enter-label}
+% \end{figure}
+
+\newpage
+\vspace*{\fill}
+\hspace{-.8cm}Préparé par Jean-Clément Ringenbach\hfill Version du 04.07.2025
+\newpage
+
+
+
+\showindex[3]{Index des titres}{titleidx}
+\showindex[3]{Index des auteurs}{authidx}
+
+\setlength\baselineadj{-0.9\baselineskip}
+% https://docs.google.com/spreadsheets/d/1W9R0tt9qdjG2WRQLFLKiHFyd8-xA6KCI7C79ZGgFjYM/edit
+
+
+%%%%%%%%%%%%% Input des différents chants
+\begin{songs}{titleidx,authidx}
+% \pagenumbering{arabic}
+\mysongsection{Chanson française}
+\input{chants/1_chanson_francaise}
+%
+\mysongsection{Chants scouts}
+\input{chants/2_chants_scouts}
+%
+\mysongsection{Chants en anglais}
+\input{chants/3_chants_anglais}
+%
+\mysongsection{Chants spi}
+\input{chants/4_chants_spi}
+%
+\mysongsection{Traditionnel}
+\input{chants/5_traditionnel_floklore}
+%
+% \mysongsection{Autres}
+% \input{chants/6_autres}
+
+\end{songs}
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=.95\linewidth]{photos_accords/rythmes.png}
+\end{figure}
+
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=.95\linewidth]{photos_accords/accords_1.png}
+\end{figure}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=.95\linewidth]{photos_accords/accords_2.png}
+\end{figure}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=.95\linewidth]{photos_accords/accords_3.png}
+\end{figure}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=.95\linewidth]{photos_accords/accords_4.png}
+\end{figure}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=.95\linewidth]{photos_accords/accords_5.png}
+\end{figure}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=.95\linewidth]{photos_accords/accords_6.png}
+\end{figure}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=.95\linewidth]{photos_accords/accords_7.png}
+\end{figure}
+
+\end{document}
+
+
